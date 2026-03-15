@@ -1,4 +1,4 @@
-# 🌊 FLOW - Task Management & Team Collaboration App
+#  FLOW - Task Management & Team Collaboration App
 
 [![Android](https://img.shields.io/badge/Platform-Android-green)](https://developer.android.com/)  
 [![PHP](https://img.shields.io/badge/Backend-PHP-blue)](https://www.php.net/)  
