@@ -37,15 +37,6 @@ The goal is to **increase productivity and communication** for remote work envir
 - **Deadline Notifications:** Keep track of pending tasks  
 - **Simple & Intuitive UI:** Built for smooth Android experience
 
----
-
-## 📸 Screenshots
-> Add your app screenshots in a `screenshots/` folder and link them here  
-
-![Login Screen](screenshots/login.png)  
-![Dashboard](screenshots/dashboard.png)  
-![Task Details](screenshots/task_details.png)  
-![Chat Screen](screenshots/chat.png)
 
 ---
 
