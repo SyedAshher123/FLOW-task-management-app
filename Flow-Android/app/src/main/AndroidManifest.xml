@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/flow_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/flow_icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Flow_Frontend_Ahmed"
+        android:usesCleartextTraffic="true">
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity
+            android:name=".item_chat_image_received"
+            android:exported="false" />
+        <activity
+            android:name=".item_chat_image_sent"
+            android:exported="false" />
+        <activity
+            android:name=".item_chat_received"
+            android:exported="false" />
+        <activity
+            android:name=".item_chat_sent"
+            android:exported="false" />
+        <activity
+            android:name=".view_attendance"
+            android:exported="false" />
+        <activity
+            android:name=".Select_project"
+            android:exported="false" />
+        <activity
+            android:name=".Check_In_out"
+            android:exported="false" />
+        <activity
+            android:name=".notifications_page"
+            android:exported="false" />
+        <activity
+            android:name=".invite_users_page"
+            android:exported="false" />
+        <activity
+            android:name=".chat_page"
+            android:exported="false" />
+        <activity
+            android:name=".add_chats_page"
+            android:exported="false" />
+        <activity
+            android:name=".all_chats_page"
+            android:exported="false" />
+        <activity
+            android:name=".project_members_page"
+            android:exported="false" />
+        <activity
+            android:name=".manage_project_page"
+            android:exported="false" />
+        <activity
+            android:name=".create_project_page"
+            android:exported="false" />
+        <activity
+            android:name=".tasks_you_page"
+            android:exported="false" />
+        <activity
+            android:name=".create_task"
+            android:exported="false" />
+        <activity
+            android:name=".Task_Details"
+            android:exported="false" />
+        <activity
+            android:name=".sign_up_page"
+            android:exported="false" />
+        <activity
+            android:name=".tasks_page"
+            android:exported="false" />
+        <activity
+            android:name=".manage_organisation"
+            android:exported="false" />
+        <activity
+            android:name=".people"
+            android:exported="false" />
+        <activity
+            android:name=".login"
+            android:exported="false" />
+        <activity
+            android:name=".all_tasks_tab"
+            android:exported="false" />
+        <activity
+            android:name=".announcements_tab"
+            android:exported="false" />
+        <activity
+            android:name=".projects"
+            android:exported="false" />
+        <activity
+            android:name=".home_page"
+            android:exported="false" />
+
+        <receiver
+            android:name=".NetworkReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".splash_screen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

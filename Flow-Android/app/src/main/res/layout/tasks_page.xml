@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#F4F7FC"
+    android:id="@+id/main"
+    android:fitsSystemWindows="true">
+
+    <!-- ========================================================= -->
+    <!-- TOP SCROLLABLE CONTENT -->
+    <!-- ========================================================= -->
+    <ScrollView
+        android:id="@+id/scrollArea"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNav"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- TOP BLUE HEADER -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/home_page_top_section"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/pageTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tasks"
+                    android:textColor="@android:color/white"
+                    android:textSize="30sp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:padding="12dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:id="@+id/tabForYou"
+                    android:text="Tasks for you"
+                    android:gravity="center"
+                    android:textColor="#1e90ff"
+                    android:clickable="true"
+                    android:focusable="true">
+
+
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:id="@+id/tabByYou"
+                    android:text="Tasks by you"
+                    android:gravity="center"
+                    android:textColor="#8293B5">
+
+
+                </TextView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="18dp"
+                >
+                <TextView
+                    android:id="@+id/all"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/oblong_blue"
+                    android:text="All"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="6dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                </TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:id="@+id/pending"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/oblong_white"
+                    android:text="Pending"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="6dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:id="@+id/completed"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/oblong_white"
+                    android:text="Completed"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_marginHorizontal="6dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    >
+
+                </TextView>
+
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recyclerViewTasks"
+                tools:listitem="@layout/tasks_page_card"
+                android:layout_marginTop="18dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+    <!-- ========================================================= -->
+    <!-- FIXED BOTTOM NAVIGATION BAR -->
+    <!-- ========================================================= -->
+
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="20dp"
+        android:background="@color/white"
+        android:weightSum="4">
+
+        <!-- Home -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/homeBtn">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/home"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="#7A8FA6"
+                android:textSize="11sp"/>
+        </LinearLayout>
+
+        <!-- Projects -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/projectsBtn">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/building"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Projects"
+                android:textColor="#7A8FA6"
+                android:textSize="11sp"/>
+        </LinearLayout>
+
+        <!-- Tasks -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/tasksBtn">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/task_active"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tasks"
+                android:textColor="#2F80FF"
+                android:textSize="11sp"/>
+        </LinearLayout>
+
+        <!-- Notifications -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/notificationsBtn">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/bell"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notifications"
+                android:textColor="#7A8FA6"
+                android:textSize="11sp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <!-- Add this inside the root RelativeLayout, after your bottomNav -->
+
+
+</RelativeLayout>

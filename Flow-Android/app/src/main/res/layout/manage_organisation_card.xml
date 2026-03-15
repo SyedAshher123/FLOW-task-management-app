@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:backgroundTint="@android:color/white"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    android:id="@+id/main"
+    android:fitsSystemWindows="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp">
+
+        <!-- Profile Circle -->
+        <FrameLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/org_logo_placeholder" />
+
+
+
+            <!-- Green active dot -->
+            <View
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@drawable/status_green"
+                android:layout_gravity="bottom|end"
+
+                android:id="@+id/online_status"/>
+        </FrameLayout>
+
+        <!-- Name, Role, Email -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical"
+            android:id="@+id/name_container">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Placeholder Name"
+                    android:textColor="#122042"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_role"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="2dp"
+                    android:text="Owner"
+                    android:textSize="12sp"
+                    android:textColor="#7B1EFF"
+                    android:background="@drawable/bg_owner_badge" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="placeholder@techcorp.com"
+                android:textColor="#6B7280"
+                android:textSize="14sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/building"
+                    android:id="@+id/building"
+                    >
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="team_name"
+                    android:textColor="#6B7280"
+                    android:layout_toRightOf="@id/building"
+                    android:layout_marginStart="4dp"
+                    android:textSize="12sp"
+                    >
+                </TextView>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+
+        <!-- Email Icon -->
+        <RelativeLayout
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:background="@drawable/right_arrow_24">
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

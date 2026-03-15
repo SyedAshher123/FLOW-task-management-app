@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="32dp">
+
+        <ImageView
+            android:id="@+id/logo_placeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome Back to Flow!"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/dark_blue"
+            android:layout_below="@id/logo_placeholder"
+            android:layout_marginTop="24dp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <TextView
+            android:id="@+id/label_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email Address"
+            android:textColor="@color/dark_blue"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_below="@id/title"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <!-- Email Input -->
+        <EditText
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Enter your email"
+            android:layout_below="@id/label_email"
+            android:layout_marginTop="8dp"
+            android:paddingHorizontal="16dp"
+            android:textColor="#000000"
+            android:textColorHint="#AAAAAA"
+            android:background="@drawable/bg_edittext"
+            android:inputType="textEmailAddress"
+            android:fontFamily="@font/poppins_light"/>
+
+        <!-- Password Label -->
+        <TextView
+            android:id="@+id/label_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="@color/dark_blue"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_below="@id/input_email"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <!-- Password Input -->
+        <EditText
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Enter your password"
+            android:layout_below="@id/label_password"
+            android:layout_marginTop="8dp"
+            android:paddingHorizontal="16dp"
+            android:textColor="#000000"
+            android:textColorHint="#AAAAAA"
+            android:background="@drawable/bg_edittext"
+            android:inputType="textPassword"
+            android:fontFamily="@font/poppins_light"/>
+
+        <TextView
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Login"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_below="@id/input_password"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_button_primary"
+            android:fontFamily="@font/poppins_medium"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_below="@id/btn_login">
+            <!-- Already have account -->
+            <TextView
+                android:id="@+id/signin_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account? "
+                android:textColor="#777777"
+                android:textSize="13sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_light"/>
+
+            <TextView
+                android:id="@+id/signup_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:textColor="#0B1D45"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:layout_toRightOf="@id/signin_text"
+                android:layout_alignBaseline="@id/signin_text"
+                android:fontFamily="@font/poppins_medium"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#F4F7FC"
+    android:id="@+id/main"
+    android:fitsSystemWindows="true">
+
+    <!-- Scroll Area -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- TOP BLUE SECTION -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@drawable/home_page_top_section"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/back_arrow"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/back_arrow"
+                    android:layout_alignParentStart="true"/>
+
+                <TextView
+                    android:id="@+id/teamTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Field Ops Karachi"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/white"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/back_arrow"/>
+
+                <TextView
+                    android:id="@+id/subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Operations Division"
+                    android:textSize="13sp"
+                    android:textColor="#DDE5FF"
+                    android:layout_below="@id/teamTitle"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/back_arrow"
+                    android:layout_marginTop="4dp"/>
+
+            </RelativeLayout>
+
+            <!-- TABS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="18dp">
+
+                <TextView
+                    android:id="@+id/tabAnnouncements"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="Announcements"
+                    android:textSize="14sp"
+                    android:textColor="#1e90ff"
+                   />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Tasks"
+                    android:textSize="14sp"
+                    android:textColor="#8293B5"
+                    android:layout_marginStart="22dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="All Tasks"
+                    android:textSize="14sp"
+                    android:textColor="#8293B5"
+                    android:layout_marginStart="22dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="People"
+                    android:textSize="14sp"
+                    android:textColor="#8293B5"
+                    android:layout_marginStart="22dp"/>
+
+            </LinearLayout>
+
+            <!-- White Content -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                android:padding="20dp">
+
+                <!-- Create Announcement Button -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/create_organisation_button"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Create Announcement"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp"/>
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_announcement">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

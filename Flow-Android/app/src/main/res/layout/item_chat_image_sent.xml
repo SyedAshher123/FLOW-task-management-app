@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:id="@+id/main"
+android:gravity="end"
+android:padding="6dp">
+
+<FrameLayout
+    android:layout_width="200dp"
+    android:layout_height="200dp">
+
+    <ImageView
+        android:id="@+id/image_sent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/vanishBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vanish"
+        android:layout_margin="4dp"
+        android:textColor="@android:color/holo_red_light"
+        android:background="@android:color/white"
+        android:textSize="10sp"
+        android:visibility="gone"/>
+</FrameLayout>
+
+</LinearLayout>

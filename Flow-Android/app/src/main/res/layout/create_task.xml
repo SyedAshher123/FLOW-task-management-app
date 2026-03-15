@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7FC"
+    android:fitsSystemWindows="true">
+
+    <!-- TOP HEADER -->
+    <RelativeLayout
+        android:id="@+id/pageTitle"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@drawable/home_page_top_section"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Task"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+    <!-- SCROLL CONTENT -->
+    <ScrollView
+        android:layout_below="@id/pageTitle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- PROJECT NAME -->
+            <TextView
+                android:id="@+id/tvProjectName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Project Name"
+                android:textSize="16sp"
+                android:textColor="#001542"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- ASSIGN TO -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Assign To *"
+                android:textSize="14sp"
+                android:textColor="#1A1A2E" />
+
+            <Spinner
+                android:id="@+id/spinnerAssignTo"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_edittext"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+
+            <!-- TITLE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Task Title *"
+                android:textSize="14sp"
+                android:textColor="#1A1A2E"
+                android:layout_marginBottom="4dp"/>
+
+            <EditText
+                android:id="@+id/etTitle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Enter task title"
+                android:background="@drawable/bg_edittext"
+                android:textColor="#001542"
+                android:textSize="14sp"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+
+            <!-- DESCRIPTION -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="14sp"
+                android:textColor="#1A1A2E"
+                android:layout_marginBottom="4dp"/>
+
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:hint="Enter task description"
+                android:background="@drawable/bg_edittext"
+                android:textColor="#001542"
+                android:textSize="14sp"
+                android:padding="12dp"
+                android:gravity="top"
+                android:layout_marginBottom="16dp" />
+
+
+            <!-- PRIORITY -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Priority"
+                android:textSize="14sp"
+                android:textColor="#1A1A2E"
+                android:layout_marginBottom="4dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerPriority"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_edittext"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+
+            <!-- DEADLINE -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deadline"
+                android:textSize="14sp"
+                android:textColor="#1A1A2E"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/etDeadline"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Select Deadline"
+                android:gravity="center_vertical"
+                android:padding="12dp"
+                android:textColor="#001542"
+                android:textSize="14sp"
+                android:background="@drawable/bg_edittext"
+                android:layout_marginBottom="24dp" />
+
+
+
+            <!-- SUBMIT BUTTON -->
+            <RelativeLayout
+                android:id="@+id/btnCreateTask"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/create_organisation_button"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Create Task"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/org_card_bg"
+    android:padding="16dp"
+    android:layout_marginVertical="8dp"
+    android:id="@+id/main"
+    android:fitsSystemWindows="true">
+
+    <!-- Circle Logo / Initials -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/orgLogo"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/org_logo_placeholder"
+        android:layout_gravity="center" />
+
+    <!-- Right Content -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="14dp">
+
+        <!-- Name + Role badge -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/orgName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Placeholder Title"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#001542" />
+
+            <TextView
+                android:id="@+id/orgRoleBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Role"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                android:textColor="#A569FF"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/orgDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Placeholder description"
+            android:textColor="#5D6B85"
+            android:textSize="13sp"
+            android:layout_marginTop="4dp" />
+
+        <!-- Members + Teams -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/team_icon"
+                app:tint="#606F89" />
+
+            <TextView
+                android:id="@+id/orgMembers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#7E899F"
+                android:textSize="13sp"
+                android:layout_marginStart="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="members"
+                android:textColor="#7E899F"
+                android:textSize="12sp"
+                android:layout_marginStart="4dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Arrow -->
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:src="@drawable/right_arrow_24"
+        android:layout_gravity="center_vertical"
+        app:tint="#B7C2D6" />
+
+</LinearLayout>

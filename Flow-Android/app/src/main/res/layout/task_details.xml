@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7FC"
+    android:fitsSystemWindows="true">
+
+    <!-- TOP HEADER -->
+    <RelativeLayout
+        android:id="@+id/topHeader"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/dark_blue"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvTaskHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Task Details"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <!-- Optional: profile or notification icons -->
+    </RelativeLayout>
+
+    <!-- SCROLLABLE CONTENT -->
+    <ScrollView
+        android:id="@+id/scrollContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topHeader"
+        android:fillViewport="true"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Task Title -->
+            <TextView
+                android:id="@+id/tvTaskTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Task Title"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#001542"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Status & Priority Chips -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="In Progress"
+                    android:textColor="@android:color/white"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="6dp"
+                    android:background="@drawable/chip_blue"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/tvPriority"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="High"
+                    android:textColor="@android:color/white"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="6dp"
+                    android:background="@drawable/chip_red" />
+            </LinearLayout>
+
+            <!-- Description Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/card_bg"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Task description goes here..."
+                    android:textSize="16sp"
+                    android:textColor="#5D6D7E" />
+            </LinearLayout>
+
+            <!-- Assigned Info -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Assigned By"
+                    android:textColor="#7F8C8D"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvAssignedBy"
+                    android:text="Manager Name"
+                    android:textColor="#001542"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Assigned To"
+                    android:textColor="#7F8C8D"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvAssignedTo"
+                    android:text="User Name"
+                    android:textColor="#001542"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Deadline"
+                    android:textColor="#7F8C8D"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tvDeadline"
+                    android:text="2025-12-05"
+                    android:textColor="#001542"/>
+            </LinearLayout>
+
+            <!-- Manager Buttons -->
+            <LinearLayout
+                android:id="@+id/managerButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginBottom="12dp">
+
+                <Button
+                    android:id="@+id/btnRequestUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="Request Update"
+                    android:backgroundTint="#F39C12"
+                    android:textColor="@android:color/white"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    />
+
+                <Button
+                    android:id="@+id/btnMarkCompleted"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="Mark as Completed"
+                    android:backgroundTint="#27AE60"
+                    android:textColor="@android:color/white"
+                    />
+            </LinearLayout>
+
+            <!-- Member Update Section -->
+            <LinearLayout
+                android:id="@+id/memberUpdateSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:background="@drawable/card_bg"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Upload Progress"
+                    android:textStyle="bold"
+                    android:textColor="#001542"/>
+
+                <ImageView
+                    android:id="@+id/imgPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="centerCrop"
+                    android:background="#DCDCDC"/>
+
+                <Button
+                    android:id="@+id/btnChooseImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose Image"
+                    android:backgroundTint="#3498DB"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="8dp"/>
+
+                <EditText
+                    android:id="@+id/etUpdateMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:hint="Write your update..."
+                    android:gravity="top"
+                    android:background="@drawable/bg_edittext"
+                    android:padding="10dp"
+                    android:layout_marginTop="8dp"/>
+
+                <Button
+                    android:id="@+id/btnSubmitUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:text="Submit Update"
+                    android:backgroundTint="#2ECC71"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <!-- RecyclerView for updates -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All Updates"
+                android:textSize="16sp"
+                android:textColor="#001542"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="12dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvUpdates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

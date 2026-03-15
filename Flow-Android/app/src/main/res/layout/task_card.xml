@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="14dp"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/announcment_card_bg"
+    android:elevation="2dp"
+    android:id="@+id/main"
+    android:fitsSystemWindows="true">
+
+    <!-- Row: Avatar + Title + Chips -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <!-- Avatar Initials -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatarInitials"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/org_logo_placeholder" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/taskTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Placeholder Title"
+            android:textColor="#001542"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/avatarInitials"
+            android:layout_alignTop="@id/avatarInitials"/>
+
+        <!-- Priority Chip -->
+        <TextView
+            android:id="@+id/priorityChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="high"
+            android:textSize="11sp"
+            android:textColor="#D9212C"
+            android:background="@drawable/chip_red"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_toEndOf="@id/taskTitle"
+            android:layout_marginStart="8dp"
+            android:layout_alignBottom="@id/taskTitle"/>
+
+        <!-- Status Chip -->
+        <TextView
+            android:id="@+id/statusChip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="in-progress"
+            android:textSize="11sp"
+            android:textColor="#0066FF"
+            android:background="@drawable/chip_blue"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_toEndOf="@id/priorityChip"
+            android:layout_marginStart="6dp"
+            android:layout_alignBottom="@id/priorityChip"/>
+    </RelativeLayout>
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/taskDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Complete inventory count for warehouse zone A"
+        android:textColor="#001542"
+        android:textSize="13sp"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Footer -->
+    <TextView
+        android:id="@+id/taskFooter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Due: Today • Assigned by: Sarah Ahmed"
+        android:textColor="#7A8AA0"
+        android:textSize="12sp"
+        android:layout_marginTop="6dp"/>
+
+</LinearLayout>

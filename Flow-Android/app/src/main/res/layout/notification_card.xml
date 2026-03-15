@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:backgroundTint="@android:color/white"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    android:id="@+id/main"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:id="@+id/upper">
+
+            <!-- Profile Circle -->
+            <RelativeLayout
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/circle"
+                >
+                <ImageView
+                    android:id="@+id/danger"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/danger_icon"
+                    android:contentDescription="Email"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+            <!-- Name, Role, Email -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Notification Title"
+                        android:textColor="#122042"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/poppins_medium"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_notificationDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="This is a notification"
+                    android:textColor="#6B7280"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_light"/>
+
+                <TextView
+                    android:id="@+id/timestamp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="timestamp"
+                    android:textColor="#6B7280"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/poppins_light"/>
+
+
+
+            </LinearLayout>
+
+            <!-- Email Icon -->
+            <RelativeLayout
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+
+                >
+                <ImageView
+                    android:id="@+id/btn_email"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/bell_active"
+                    android:contentDescription="Email"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/upper"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginBottom="12dp">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/upper"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:id="@+id/btnAccept"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Accept"
+                    android:background="@drawable/join_button"
+                    android:paddingVertical="5dp"
+                    android:paddingHorizontal="15dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+
+                    >
+                </TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/upper"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:id="@+id/btnReject"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reject"
+                    android:background="@drawable/join_button"
+                    android:paddingVertical="5dp"
+                    android:paddingHorizontal="15dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    >
+                </TextView>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>

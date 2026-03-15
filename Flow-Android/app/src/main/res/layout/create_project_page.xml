@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7FC"
+    android:fitsSystemWindows="true">
+
+    <!-- TOP HEADER -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@drawable/home_page_top_section"
+        android:padding="20dp"
+        android:id="@+id/pageTitle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create New Project"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:fontFamily="@font/poppins_medium"/>
+    </RelativeLayout>
+
+    <!-- FORM -->
+    <LinearLayout
+        android:layout_below="@id/pageTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_marginTop="10dp">
+
+        <!-- Project Image Preview -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProjectImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginBottom="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/placeholder_pfp"
+            android:contentDescription="Project Image" />
+
+        <!-- Pick Image Button -->
+        <RelativeLayout
+            android:id="@+id/btnPickImage"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/join_button"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pick Project Image"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins_light"/>
+        </RelativeLayout>
+
+
+        <!-- Project Name -->
+        <EditText
+            android:id="@+id/etProjectName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Project Name"
+            android:background="@drawable/bg_edittext"
+            android:padding="12dp"
+            android:textColor="#001542"
+            android:textSize="14sp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Project Description -->
+        <EditText
+            android:id="@+id/etProjectDescription"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:hint="Project Description..."
+            android:background="@drawable/bg_edittext"
+            android:padding="12dp"
+            android:textColor="#001542"
+            android:textSize="14sp"
+            android:gravity="top"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Create Button -->
+        <RelativeLayout
+            android:id="@+id/btnCreateProject"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/create_organisation_button"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Project"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins_light"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

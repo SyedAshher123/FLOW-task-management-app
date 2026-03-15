@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp"
+    android:clipToPadding="false"
+    android:elevation="2dp"
+    android:background="@drawable/announcment_card_bg"
+    android:id="@+id/main"
+    android:fitsSystemWindows="true">
+
+    <!-- Row: Avatar + Title + Menu -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <!-- Title -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <!-- Avatar Circle with initials -->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/avatarInitials"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:background="@drawable/org_logo_placeholder" />
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Placeholder Title"
+                android:textColor="#001542"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_toEndOf="@id/avatarInitials"
+                android:layout_marginStart="12dp"
+                android:layout_alignTop="@id/avatarInitials"/>
+
+            <TextView
+                android:id="@+id/authorTimeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sarah Ahmed • 2 hours ago"
+                android:textColor="#7A8AA0"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp"
+                android:layout_below="@id/titleText"
+                android:layout_marginStart="12dp"
+                android:layout_toRightOf="@id/avatarInitials"
+                />
+
+            <!-- Menu Icon -->
+            <!-- 3-dot menu -->
+            <LinearLayout
+                android:id="@+id/menuContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:src="@drawable/dot"
+                    android:layout_marginEnd="2dp"/>
+
+                <ImageView
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:src="@drawable/dot"
+                    android:layout_marginEnd="2dp"/>
+
+                <ImageView
+                    android:layout_width="5dp"
+                    android:layout_height="5dp"
+                    android:src="@drawable/dot" />
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+    <!-- Author + Time -->
+
+
+    <!-- Message Body -->
+    <TextView
+        android:id="@+id/bodyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Join us for our weekly sync on Friday at 2 PM. We'll discuss project updates and upcoming deliverables."
+        android:textColor="#001542"
+        android:textSize="13sp"
+        android:layout_marginTop="12dp" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E4E9F4"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Like + Comment Row -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/likeIcon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/like" />
+
+        <TextView
+            android:id="@+id/likeCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#7A8AA0"
+            android:textSize="12sp"
+            android:layout_marginStart="6dp"/>
+
+        <ImageView
+            android:id="@+id/commentIcon"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/comment"
+            android:layout_marginStart="20dp" />
+
+        <TextView
+            android:id="@+id/commentCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#7A8AA0"
+            android:textSize="12sp"
+            android:layout_marginStart="6dp"/>
+    </LinearLayout>
+
+</LinearLayout>

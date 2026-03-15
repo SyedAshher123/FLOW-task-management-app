@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#F4F7FC"
+    android:fitsSystemWindows="true">
+
+    <!-- TOP HEADER -->
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@drawable/home_page_top_section"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvProjectTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Project Name"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:fontFamily="@font/poppins_medium"/>
+    </RelativeLayout>
+
+    <!-- CONTENT AREA -->
+    <ScrollView
+        android:layout_below="@id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/projectPfp"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center"
+                android:src="@drawable/placeholder_pfp"
+                android:layout_marginVertical="30dp"
+                >
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Project Description:"
+                android:textSize="22sp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/dark_blue"
+                >
+
+            </TextView>
+
+            <!-- Project Description -->
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Project Description"
+                android:textSize="15sp"
+                android:textColor="#001542"
+                android:padding="8dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_light"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Owner:"
+                android:textSize="22sp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/dark_blue"
+                >
+
+            </TextView>
+
+            <!-- Owner -->
+            <TextView
+                android:id="@+id/tvOwner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loading..."
+                android:textSize="15sp"
+                android:textColor="#001542"
+                android:padding="8dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_light"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Join Code:"
+                android:textSize="22sp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/dark_blue"
+                >
+
+            </TextView>
+
+            <!-- Join Code -->
+            <TextView
+                android:id="@+id/tvJoinCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="******"
+                android:textSize="15sp"
+                android:textColor="#001542"
+                android:padding="8dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/poppins_light"/>
+
+            <!-- Invite Users Button -->
+            <RelativeLayout
+                android:id="@+id/btnInviteUsers"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/join_button"
+                android:gravity="center"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Invite Users"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_light"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btnMembers"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/blue_outline_btn"
+                android:gravity="center"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View Members"
+                    android:textColor="#1E8FFE"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_light"
+                    />
+            </RelativeLayout>
+
+            <!-- Tasks Title -->
+            <TextView
+                android:id="@+id/tvTasksTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active Tasks"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#001542"
+                android:padding="8dp"
+                android:fontFamily="@font/poppins_medium"/>
+
+            <!-- RecyclerView for tasks -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTasks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp"
+                tools:listitem="@layout/tasks_page_card"/>
+        </LinearLayout>
+    </ScrollView>
+    <!-- Floating Action Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabCreateTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="90dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/plus_icon"
+        android:contentDescription="Create Task"
+        app:backgroundTint="#1E8FFD"
+        app:tint="@android:color/white"/>
+</RelativeLayout>

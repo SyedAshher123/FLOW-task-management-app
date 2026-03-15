@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="32dp">
+
+        <!-- FLOW Logo Placeholder -->
+        <ImageView
+            android:id="@+id/logo_placeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/dark_blue"
+            android:layout_below="@id/logo_placeholder"
+            android:layout_marginTop="24dp"
+            android:layout_centerHorizontal="true" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Join your team and start collaborating"
+            android:textSize="14sp"
+            android:textColor="@color/dark_blue"
+            android:layout_below="@id/title"
+            android:layout_marginTop="4dp"
+            android:layout_centerHorizontal="true" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/subtitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/circle_bg"
+            android:src="@drawable/baseline_person_24"
+            android:contentDescription="Profile Image" />
+
+        <!-- Full Name Label -->
+        <TextView
+            android:id="@+id/label_fullname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full Name"
+            android:textColor="@color/dark_blue"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_below="@id/profileImage"
+            android:layout_marginTop="28dp" />
+
+        <!-- Full Name Input -->
+        <EditText
+            android:id="@+id/input_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Enter your full name"
+            android:layout_below="@id/label_fullname"
+            android:layout_marginTop="8dp"
+            android:paddingHorizontal="16dp"
+            android:textColor="#000000"
+            android:textColorHint="#AAAAAA"
+            android:background="@drawable/bg_edittext" />
+
+        <!-- Email / Phone toggle container -->
+
+
+        <!-- Email Label -->
+        <TextView
+            android:id="@+id/label_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email Address"
+            android:textColor="@color/dark_blue"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_below="@id/input_fullname"
+            android:layout_marginTop="20dp" />
+
+        <!-- Email Input -->
+        <EditText
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Enter your email"
+            android:layout_below="@id/label_email"
+            android:layout_marginTop="8dp"
+            android:paddingHorizontal="16dp"
+            android:textColor="#000000"
+            android:textColorHint="#AAAAAA"
+            android:background="@drawable/bg_edittext"
+            android:inputType="textEmailAddress" />
+
+        <!-- Password Label -->
+        <TextView
+            android:id="@+id/label_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="@color/dark_blue"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_below="@id/input_email"
+            android:layout_marginTop="20dp" />
+
+        <!-- Password Input -->
+        <EditText
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Enter your password"
+            android:layout_below="@id/label_password"
+            android:layout_marginTop="8dp"
+            android:paddingHorizontal="16dp"
+            android:textColor="#000000"
+            android:textColorHint="#AAAAAA"
+            android:background="@drawable/bg_edittext"
+            android:inputType="textPassword" />
+
+        <!-- Confirm Password Label -->
+        <TextView
+            android:id="@+id/label_confirm_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm Password"
+            android:textColor="@color/dark_blue"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_below="@id/input_password"
+            android:layout_marginTop="20dp" />
+
+        <!-- Confirm Password Input -->
+        <EditText
+            android:id="@+id/input_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Confirm your password"
+            android:layout_below="@id/label_confirm_password"
+            android:layout_marginTop="8dp"
+            android:paddingHorizontal="16dp"
+            android:textColor="#000000"
+            android:textColorHint="#AAAAAA"
+            android:background="@drawable/bg_edittext"
+            android:inputType="textPassword" />
+
+        <!-- Terms and Privacy -->
+        <CheckBox
+            android:id="@+id/checkbox_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I accept the Terms of Service and Privacy Policy"
+            android:textSize="13sp"
+            android:textColor="#555555"
+            android:layout_below="@id/input_confirm_password"
+            android:layout_marginTop="16dp" />
+
+        <!-- Create Account Button -->
+        <TextView
+            android:id="@+id/btn_create_account"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Create Account"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_below="@id/checkbox_terms"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_button_primary" />
+
+        <!-- Already have account -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_below="@id/btn_create_account">
+            <!-- Already have account -->
+            <TextView
+                android:id="@+id/signin_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account? "
+                android:textColor="#777777"
+                android:textSize="13sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/signin_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign in"
+                android:textColor="#0B1D45"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:layout_toRightOf="@id/signin_text"
+                android:layout_alignBaseline="@id/signin_text" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>

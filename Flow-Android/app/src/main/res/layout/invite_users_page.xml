@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@drawable/home_page_top_section"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvProjectTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Invite People"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:fontFamily="@font/poppins_medium"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+
+
+        <EditText
+
+            android:id="@+id/etSearch"
+            android:hint="Search by name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext"
+            android:padding="12dp"
+            android:drawableEnd="@drawable/search_icon"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/poppins_light"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvResults"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            tools:listitem="@layout/people_card"
+            />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:hint="Enter email to invite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_edittext"
+            android:padding="12dp"
+            android:fontFamily="@font/poppins_light"/>
+
+        <RelativeLayout
+            android:id="@+id/btnInvite"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/join_button"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="18dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Invite"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_light"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

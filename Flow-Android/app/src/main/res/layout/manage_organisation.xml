@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:id="@+id/main"
+    android:fitsSystemWindows="true">
+
+    <!-- ========================================================= -->
+    <!-- TOP SCROLLABLE CONTENT -->
+    <!-- ========================================================= -->
+    <ScrollView
+        android:id="@+id/scrollArea"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- TOP BLUE HEADER -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/home_page_top_section"
+                android:padding="20dp">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/back_arrow"
+                    android:id="@+id/back_arrow"
+                    android:layout_marginTop="5dp">
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/pageTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Manage Organisation"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_toEndOf="@id/back_arrow"
+                    android:layout_marginStart="12dp"/>
+
+                <!-- Search bar background -->
+                <RelativeLayout
+                    android:id="@+id/searchBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pageTitle"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/search_box_bg"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:id="@+id/searchIcon"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/search_icon"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        app:tint="#AFC4FF" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/searchIcon"
+                        android:layout_marginStart="12dp"
+                        android:hint="Search teams..."
+                        android:textSize="14sp"
+                        android:background="@android:color/transparent"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#AFC4FF"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <!-- WHITE CONTENT AREA -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Owners"
+                    android:textColor="@color/dark_blue"
+                    android:textStyle="bold"
+                    android:id="@+id/owners_text"
+                    android:fontFamily=""
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="0"
+                    android:textColor="@color/dark_blue"
+                    android:layout_toEndOf="@id/owners_text"
+                    android:layout_marginStart="8dp"
+                    android:layout_alignBaseline="@id/owners_text"
+                    >
+
+                </TextView>
+
+
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="12dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Managers"
+                    android:textColor="@color/dark_blue"
+                    android:textStyle="bold"
+                    android:id="@+id/managers_text"
+                    android:fontFamily=""
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="0"
+                    android:textColor="@color/dark_blue"
+                    android:layout_toEndOf="@id/managers_text"
+                    android:layout_marginStart="8dp"
+                    android:layout_alignBaseline="@id/managers_text"
+                    >
+
+                </TextView>
+
+
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="12dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="Members"
+                    android:textColor="@color/dark_blue"
+                    android:textStyle="bold"
+                    android:id="@+id/members_text"
+                    android:fontFamily=""
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:text="0"
+                    android:textColor="@color/dark_blue"
+                    android:layout_toEndOf="@id/members_text"
+                    android:layout_marginStart="8dp"
+                    android:layout_alignBaseline="@id/members_text"
+                    >
+
+                </TextView>
+
+
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="12dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- ========================================================= -->
+    <!-- FIXED BOTTOM NAVIGATION BAR -->
+    <!-- ========================================================= -->
+
+
+</RelativeLayout>

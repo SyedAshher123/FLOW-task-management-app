@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "559269082090",
+    "project_id": "flow-ac870",
+    "storage_bucket": "flow-ac870.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:559269082090:android:560f8312726dec64cab893",
+        "android_client_info": {
+          "package_name": "com.ahmedprojects.flow_frontend_ahmed"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0-Bk4DTc-DWp7H0IQ8HzLOw1rEfu0ooQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
